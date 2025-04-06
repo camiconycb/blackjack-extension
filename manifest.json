@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Blackjack Strategy Advisor Pro",
+  "version": "1.2",
+  "description": "AI-powered Blackjack assistant with advanced features",
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png"
+    }
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources": [{
+    "resources": ["cards/*/*.png"],
+    "matches": ["<all_urls>"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

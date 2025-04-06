@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blackjack Pro Advisor</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1><i class="fas fa-cards"></i> Blackjack Advisor Pro</h1>
+        </header>
+
+        <div class="hands-container">
+            <div class="hand-section player-hand">
+                <div class="hand-header">
+                    <h2>Tu Mano <span class="total" id="player-total">0</span></h2>
+                    <button class="btn btn-primary btn-add" data-hand="player">
+                        <i class="fas fa-plus-circle"></i> Añadir
+                    </button>
+                </div>
+                <div class="cards-grid" id="player-cards"></div>
+            </div>
+
+            <div class="hand-section dealer-hand">
+                <div class="hand-header">
+                    <h2>Crupier <span class="total" id="dealer-total">0</span></h2>
+                    <button class="btn btn-secondary btn-add" data-hand="dealer">
+                        <i class="fas fa-plus-circle"></i> Añadir
+                    </button>
+                </div>
+                <div class="cards-grid" id="dealer-cards"></div>
+            </div>
+        </div>
+
+        <div class="action-bar">
+            <button class="btn btn-success" id="consult-btn">
+                <i class="fas fa-robot"></i> Consultar Estrategia
+            </button>
+            <button class="btn btn-danger" id="clear-btn">
+                <i class="fas fa-eraser"></i> Reiniciar
+            </button>
+        </div>
+
+        <div class="result-container" id="result"></div>
+    </div>
+
+    <div id="card-modal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h3>Seleccionar Carta</h3>
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="add">Añadir</button>
+                    <button class="mode-btn" data-mode="replace">Reemplazar</button>
+                </div>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="card-grid" id="card-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
