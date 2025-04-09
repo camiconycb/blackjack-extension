@@ -7,7 +7,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 async function fetchToken() {
   try {
-    const response = await fetch('http://blackjack-backend-production.up.railway.app/get-token', {
+    const response = await fetch('https://blackjack-backend-production.up.railway.app/get-token', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
