@@ -22,5 +22,8 @@
   }],
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "host_permissions": [
+    "https://blackjack-backend-production.up.railway.app/*"
+  ]
 }
